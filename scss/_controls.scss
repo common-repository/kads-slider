@@ -1,0 +1,367 @@
+
+.kads-yesno-control{
+    display: inline-block;
+    *display: inline;
+}
+.button-yesno {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    .button{
+        padding: 0 30px 1px;
+        color: #555d66;
+        background: #f7f7f7;
+        border-color: darken(#f7f7f7,15%);
+        font-weight: bold;
+        &:hover,
+            &:focus,
+            &:active {
+            z-index: 2;
+        }
+    }
+    > .yes{
+        position: relative;
+        margin-right: -1px;
+        .button{
+            @include border-radius(4px 0 0 4px);
+        }
+        &.selected{
+            .button{
+                background: $color-active;
+                border-color: darken($color-active,5%);
+                color: #fff;
+            }
+        }
+    }
+    > .no{
+        position: relative;
+        margin-left: -1px;
+        .button{
+            @include border-radius(0 4px 4px 0);
+        }
+        &.selected{
+            .button{
+                background: $color-delete;
+                border-color: darken($color-delete,5%);
+                color: #fff;
+            }
+        }
+    }
+}
+.customize-control input[type="text"].input-text{
+    line-height: 40px;
+}
+.icons{
+    .iconpicker-popover.popover.bottom > .arrow, 
+    .iconpicker-popover.popover.bottomLeft > .arrow, 
+    .iconpicker-popover.popover.bottomRight > .arrow{
+        border-bottom-color: #fff;
+        top: -10px;
+        &:after {
+            border-bottom-color: #fff;
+        }
+    }
+    .iconpicker-popover.popover .popover-title {
+        border-bottom: 1px solid #fff;
+        background-color: #ffff;
+    }
+}
+
+.input-group {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    .icp {
+        padding-left: 60px;
+    }
+    > .input-text{
+        position: relative;
+    }
+    > .input-group-addon{
+        padding: 13px 13px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        &:hover,
+            &:focus,
+            &:active {
+            z-index: 2;
+        }
+    }
+}
+input[type="text"].block-shortcode{
+    background: #eee;
+}
+
+.label-main{
+    width: 110px;
+    display: inline-block;
+}
+.label-full{
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.kads-slider-control-text{
+    input{
+        width: 100%;
+    }
+}
+.kads-slider-control-number{
+    .quantity {
+        position: relative;
+        display: inline-block;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button
+    {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number]
+    {
+        -moz-appearance: textfield;
+    }
+
+    .quantity input {
+        width: 120px;
+        height: 30px;
+        line-height: 1.65;
+        float: left;
+        display: block;
+        padding: 0 30px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .quantity input:focus {
+        outline: 0;
+    }
+
+    .quantity-button {
+        position: relative;
+        cursor: pointer;
+        width: 26px;
+        height: 30px;
+        overflow: hidden;
+        text-align: center;
+        color: #333;
+        font-size: 16px;
+        line-height: 28px;
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        @include box-shadow(none);
+        @include border-radius(0);
+    }
+
+    .quantity-button.quantity-up {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .quantity-button.quantity-down {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+.kads-slider-control-yesno {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    .button{
+        padding: 0 30px 1px;
+        color: #555d66;
+        background: #f7f7f7;
+        border-color: darken(#f7f7f7,15%);
+        @include border-radius(0);
+        &:hover,
+            &:focus,
+            &:active {
+            z-index: 2;
+        }
+    }
+    > .yes{
+        position: relative;
+        margin-right: -1px;
+        .button{
+            @include border-radius(4px 0 0 4px);
+        }
+        &.selected{
+            .button{
+                background: $color-active;
+                border-color: darken($color-active,5%);
+                color: #fff;
+            }
+        }
+    }
+    > .no{
+        position: relative;
+        margin-left: -1px;
+        .button{
+            @include border-radius(0 4px 4px 0);
+        }
+        &.selected{
+            .button{
+                background: $color-delete;
+                border-color: darken($color-delete,5%);
+                color: #fff;
+            }
+        }
+    }
+}
+.publishing-actions{
+    padding: 5px 0;
+}
+.hd-control-yesno {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    .button{
+        padding: 0 30px 1px;
+        color: #555d66;
+        background: #f7f7f7;
+        border-color: darken(#f7f7f7,15%);
+        @include border-radius(0);
+        &:hover,
+            &:focus,
+            &:active {
+            z-index: 2;
+        }
+    }
+    .yes{
+        position: relative;
+        margin-right: -1px;
+        .button{
+            @include border-radius(4px 0 0 4px);
+        }
+        &.selected{
+            .button{
+                background: $color-active;
+                border-color: darken($color-active,5%);
+                color: #fff;
+            }
+        }
+    }
+    .no{
+        position: relative;
+        margin-left: -1px;
+        .button{
+            @include border-radius(0 4px 4px 0);
+        }
+        &.selected{
+            .button{
+                background: $color-delete;
+                border-color: darken($color-delete,5%);
+                color: #fff;
+            }
+        }
+    }
+}
+.content-actions{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.control-row{
+    @include clearfix();
+    label{
+        @include display-inline-block();
+        padding-right: 15px;
+        @include box-sizing();
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .controls{
+        padding-left: 15px;
+        @include box-sizing();
+        @include display-inline-block();
+        white-space: nowrap;
+    }
+    .input-main{
+        width: 300px;
+    }
+    .button span{
+        line-height: 30px;
+    }
+}
+.hd-control{
+    float: left;
+    margin-right: 10px;
+    label{
+        line-height: 30px;
+        @include display-inline-block();
+        span{
+            line-height: 30px;
+        }
+    }
+    .label{
+        @include display-inline-block();
+        line-height: 20px;
+    }
+    .item-row{
+        @include clearfix();
+        .label{
+            line-height: 30px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            span{
+                line-height: 30px;
+            }
+        }
+    }
+    .button-style{
+        height: 26px;
+        background: none;
+        @include box-shadow(none);
+        padding: 0;
+        text-align: center;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 25px;
+        min-width: 30px;
+
+        span{
+            line-height: 25px;
+        }
+        &:active,
+            &:focus,
+            &:hover{
+            background: none;
+            @include box-shadow(none);
+        }
+        &.style-1{
+            margin-right: 2px;
+        }
+        &.style-2{
+            margin-right: 8px;
+        }
+    }
+}
+.hd-control-row{
+    height: 25px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    @include clearfix();
+
+}
+

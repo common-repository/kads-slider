@@ -1,0 +1,193 @@
+.warper-edit{
+    height: 100%;
+    position: relative;
+    .content-edit{
+        margin: 0;
+        padding: 0;
+    }
+    .actions-edit{
+        position: absolute;
+        top: -15px;
+        right: 4px;
+        text-align: right;
+        .actions-group-save{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+        .actions-group-view{
+            display: block;
+            &.active{
+                display: none;
+            }
+        }
+    }
+    .button-edit{
+        color: #fff;
+        padding: 0;
+        height: 15px;
+        margin-right: 2px;
+        border: none;
+        background: #000;
+        @include border-radius(0);
+        @include box-shadow(none);
+        span{
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &:hover,&:active,&:focus{
+            background: lighten(#000,15%);
+            color: #fff;
+        }
+
+        &.hd-save-html{
+            background: $color-active;
+            &:hover,&:active,&:focus{
+                background: lighten($color-active,15%);
+            }
+        }
+        &.hd-cancel-html{
+            background: $color-delete;
+            &:hover,&:active,&:focus{
+                background: lighten($color-delete,15%);
+            }
+        }
+    }
+    .content-edit-textarea{
+        height: 100%;
+        display: none;
+        textarea{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+    }
+    &.edit-active{
+        .content-edit-textarea{
+            display: block
+        }
+        .content-edit{
+            display: none;
+        }
+    }
+}
+
+
+
+.kads-slider-page-admin {
+    .color-main {
+        height: 26px;
+        margin-top: 3px;
+        margin-right: 5px;
+        line-height: 26px;
+        @include display-inline-block();
+        .label{
+            line-height: 35px;
+            span{
+                line-height: 35px;
+            }
+        }
+    }
+    .control-row{
+        .controls{
+            .button{
+                margin-top: 6px;
+                &.wp-color-result{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .wp-picker-input-wrap{
+        display: none;
+    }
+    .wp-picker-container{
+        @include display-inline-block();
+        position: relative;
+        .wp-picker-input-wrap{
+            left: 0;
+            position: absolute;
+            top: 252px;
+            vertical-align: top;
+            width: 235px;
+            z-index: 9999; 
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd; 
+        }
+        &.wp-picker-active{
+            .wp-picker-input-wrap{
+                display: block;
+            }
+        }
+        .wp-picker-holder{
+            position: absolute;
+            top: 20px;
+            left: 0;
+            z-index: 9999;
+        }
+        .wp-color-result{
+            height: 26px;
+            margin: 0 0 0;
+            padding: 0 10px;
+            width: auto;
+            @include border-radius(0);
+            @include box-shadow(none);
+            &:after{
+                display: none;
+            }
+        }
+
+    }
+    .item-row-fix{
+        top: -8px;
+    }
+}
+.kads-slider-loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.kads-slider-loading-warp{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.kads-slider-loading-content{
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    height: 60px;
+    width: 160px;
+    margin-left: -80px;
+    left: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.kads-slider-loading-warp .loading-img {
+    margin-left: 10px;
+    margin-top: 15px;
+    float: left;
+}
+.kads-slider-loading-warp span{
+    display: block;
+    line-height: 60px;
+    margin-left: 55px;
+    font-weight: 600;
+}
+.kads-slider-overplay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+}

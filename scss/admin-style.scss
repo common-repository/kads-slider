@@ -1,0 +1,33 @@
+/*
+ Some infomation for desciption
+ 
+ 
+ @package       WordPress
+ @subpackage    Kadeck
+ @author        huynhduy1985
+ @link          http://kads.kadrealestate.com/
+ @since         Kadeck 1.0
+
+*/
+@import "mixins";
+$color-active: #008ec2;
+$color-delete: #a00a00;
+$color-primary:         #ed1c24;
+$color-red:             #ed1c24;
+$color-blue:            #28739b;
+$color-green:           #00aa3c;
+$color-default:         #fff;
+$color-default-hover:   #28739b;
+$color-gray:            #999;
+$row-padding: 15px;
+$row-columns: 10;
+$row-width: 100%;
+
+@import "admin";
+@import "controls";
+@import "timeline";
+@import "button";
+@import "core-ui";
+@import "gird";
+@import "edit";
+@import "preview";
